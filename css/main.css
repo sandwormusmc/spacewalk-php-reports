@@ -1,0 +1,100 @@
+body {
+	background: #EEE;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin-bottom: 0px;
+}
+th {
+	color: #fff;
+	height: 38px;
+	padding: 10px;
+	text-align: right;
+}
+tr {
+	border: 1px solid #EEE;
+}
+td {
+	padding: 10px;
+}
+tr td {
+	border: 0.5px solid #EEE;
+	border-collapse: collapse;
+}
+table {
+	box-shadow: 0 0 5px #333;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-width: 0px 2px 0px 2px;
+	display: table;
+	margin: 0px auto;
+	padding: 0px;
+	width: 95%;
+	font-size: 12px;
+	background: #FFF;
+}
+.column_header {
+	font-weight: 700;
+	border: 0 none;
+	text-align: center;
+	color: #FFF;
+	background: #000;
+	height: 15px;
+	max-height: 20px;
+}
+.class-Action_Description {
+	width: 20%;
+}
+.class-Result {
+	width: 75px;
+}
+.class-Action_Count {
+	max-width: 50px;
+}
+.class-OSAD, .class-Operating_System, .class-O_S_Name, .class-FQDN, .class-Spacewalk_ID, .class-Action_Status {
+	text-align: center;
+	max-width: 160px;
+}
+.class-O_S_Version {
+	text-align: center;
+	width: 10px;
+}
+.main_title {
+	font-size: 32px;
+	font-weight: 900;
+	padding: 5px 10px 20px 0;
+	position: relative;
+	text-align: right;
+	-webkit-text-stroke: 1px black;
+	color: white;
+	text-shadow:
+		2px 2px 0 #333,
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.column_header_bot_half {
+	border: 0;
+	position: relative;
+}
+
+.column_header_top_half {
+	background: #000 url("/images/spacewalk-logo.png") no-repeat scroll 3px 0px;
+	border: 0;
+	position: relative;
+}
+.result-details {
+	display: none;
+}
+.sticky {
+	position: fixed;
+	margin: 0 auto;
+	top: 0;
+	width: 100%;
+}
