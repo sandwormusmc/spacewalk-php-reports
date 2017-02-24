@@ -250,7 +250,7 @@ $( document ).ready(function() {
 		//print_r($row);
 	}
 	pg_close($db);
-	$suffix='(ch.|az.|aws.)\.s\.com';
+	$suffix='your-dns-suffix-here.com';
 	foreach($fqdns as $fqdn){
 		if(preg_match('/^.*\.dev\.'.$suffix.'/',$fqdn)){
 			$envCount['dev']+=1;
