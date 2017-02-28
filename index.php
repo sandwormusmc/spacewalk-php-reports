@@ -1,8 +1,8 @@
 <?php
-	$db_hostname="somewhereovertherainbow.yourdomain.com"
-	$db_user="somepostgresuser"
-	$db_pass="somepostgrespass"
-	$sw_url="https://somespacewalkurl"
+	$db_hostname="somewhereovertherainbow.yourdomain.com";
+	$db_user="somepostgresuser";
+	$db_pass="somepostgrespass";
+	$sw_url="https://somespacewalkurl";
 ?>
 <!DOCTYPE html>
 <html>
