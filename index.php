@@ -10,7 +10,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 function showIt(id){
 	$('#'+id).toggle('slide',{direction:'up'},1500);
