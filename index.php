@@ -72,6 +72,11 @@ $( document ).ready(function() {
 	}
 	if(isset($_GET['osad'])){
 		$osadfilter=strtolower(htmlspecialchars($_GET['osad']));
+		if($osadfilter==='ready' || $osadfilter==='1'){
+			$osadfilter='1';
+		} else {
+			$osadfilter='0';
+		}
 	}
 	if(isset($_GET['result'])){
 		$resultfilter=str_replace('*','%',strtolower(htmlspecialchars($_GET['result'])));
@@ -115,7 +120,7 @@ $( document ).ready(function() {
 		$since=date('Y-m-d', strtotime('-1 days')).' 00:00:00-06';
 		//$since=date('Y-m-01').' 00:00:00-06';
 	}
-        $query.=" AND ActionOverview.earliest_action > '$since' AND ActionOverview.earliest_action < '".date('Y-m-d', strtotime('+1 days'))." 23:59:00-06'";
+        $query.=" AND ActionOverview.earliest_action > to_timestamp('$since','YYYY-MM-DD HH24:MI:SS') AND ActionOverview.earliest_action < to_timestamp('".date('Y-m-d', strtotime('+1 days'))." 23:59:00-06','YYYY-MM-DD HH24:MI:SS')";
 	if(!empty($hostfilter)){
 		$query.=" AND Server.name ILIKE '%$hostfilter%'";
 	}
@@ -129,7 +134,7 @@ $( document ).ready(function() {
 		$query.=" AND LOWER(ActionStatus.name) ILIKE '%$statusfilter%'";
 	}
 	if(isset($osadfilter)){
-		$query.=" AND PushClient.state_id ILIKE '%$osadfilter%'";
+		$query.=" AND PushClient.state_id = '$osadfilter'";
 	}
 	if($late===TRUE){
 		$query.=" AND EXTRACT(EPOCH FROM ActionToServer.pickup_time - Action.earliest_action) > 300";
